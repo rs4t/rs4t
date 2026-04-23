@@ -3,7 +3,7 @@
   <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">
 </h1>
 
-<h3 align="center">vibe-coder • chilling • bored</h3>
+<h3 align="center">mostly vibe • chilling • bored</h3>
 
 <br>
 
@@ -16,8 +16,8 @@
 *Swiss math student.*
 
 I like bots, automation, scripts, and building useful everyday stuff.  
-Minecraft server systems, backend projects, random late-night ideas —  
-basically anything that makes life easier.
+Minecraft server systems, backend projects, random late-night ideas. 
+Basically anything that makes life easier.
 
 Professional procrastinator.
 
