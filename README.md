@@ -7,7 +7,9 @@
 
 <br>
 
-<div align="center">
+<table>
+<tr>
+<td width="50%" valign="top">
 
 ## 👨‍💻 About Me
 
@@ -19,11 +21,9 @@ basically anything that makes life easier.
 
 Professional procrastinator.
 
-</div>
+</td>
 
-<br>
-
-<div align="center">
+<td width="50%" align="center">
 
 ## 📊 GitHub Stats
 
@@ -31,30 +31,6 @@ Professional procrastinator.
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rs4t&show_icons=true&include_all_commits=true&count_private=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&icon_color=58A6FF&border_color=30363D"/>
 </a>
 
-</div>
-
-<br>
-
-<div align="center">
-
-## ⚡ Current Stuff
-
-automation • backend • minecraft • scripts • design
-
-</div>
-
-<br>
-
-<div align="center">
-
-## 📫 Contact
-
-Discord: **o8mu**
-
-</div>
-
-<br>
-
-<p align="center">
-minimal README > actual productivity
-</p>
+</td>
+</tr>
+</table>
