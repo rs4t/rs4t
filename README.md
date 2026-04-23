@@ -20,14 +20,6 @@ Basically anything that makes life easier.
 
 Professional procrastinator.
 
-<br>
-
-## 🛠 Languages & Tools
-
-<p>
-  <img src="https://skillicons.dev/icons?i=python,javascript,html,css,git,github,vscode,linux,mysql,docker" />
-</p>
-
 </td>
 
 <td width="50%" align="center">
@@ -41,7 +33,7 @@ Professional procrastinator.
 <br><br>
 
 <a href="https://github.com/rs4t">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rs4t&layout=compact&langs_count=8&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&border_color=30363D"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rs4t&layout=compact&langs_count=8&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&border_color=30363D&hide=html,css&cache_seconds=1800"/>
 </a>
 
 </td>
