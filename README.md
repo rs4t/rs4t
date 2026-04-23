@@ -28,9 +28,9 @@ Professional procrastinator.
 ## 📊 GitHub Stats
 
 <a href="https://github.com/rs4t">
-  <img height="170em" src="https://github-readme-stats.vercel.app/api?username=rs4t&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=00000000" />
-  
-  <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rs4t&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&bg_color=00000000" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rs4t&show_icons=true&include_all_commits=true&count_private=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&icon_color=58A6FF&border_color=30363D"/>
+
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rs4t&layout=compact&langs_count=8&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&border_color=30363D"/>
 </a>
 
 </div>
