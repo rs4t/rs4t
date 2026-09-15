@@ -120,66 +120,117 @@ def uptime_str(created_at):
     return ", ".join(parts)
 
 
-def build_section(title, rows):
-    lines = [title]
-    for i, (label, value) in enumerate(rows):
-        connector = "└─" if i == len(rows) - 1 else "├─"
-        lines.append(f"{connector} {label} ➜ {value}")
-    return lines
-
-
-def build_stats_lines():
-    user = get_user()
-    repos = get_repos()
-
+def build_sections(user, repos):
     public_repos = user.get("public_repos", 0)
     total_stars = get_total_stars(repos)
     total_commits = get_total_commits(repos)
     followers = user.get("followers", 0)
     top_langs = get_top_languages(repos)
 
-    github_section = build_section("GitHub", [
-        ("Username", USERNAME),
-        ("Uptime", uptime_str(user["created_at"])),
-        ("Location", "Switzerland"),
-    ])
-    contact_section = build_section("Contact", [
-        ("Website", "egorz.com"),
-        ("GitHub", f"github.com/{USERNAME}"),
-    ])
-    stats_section = build_section("Stats", [
-        ("Public Repos", str(public_repos)),
-        ("Total Stars", str(total_stars)),
-        ("Total Commits", str(total_commits)),
-        ("Followers", str(followers)),
-    ])
-    lang_rows = [(lang, f"{pct:.1f}%") for lang, pct in top_langs]
-    lang_section = build_section("Top Languages", lang_rows)
-
-    right = []
-    for section in (github_section, contact_section, stats_section, lang_section):
-        right.extend(section)
-        right.append("")
-    while right and right[-1] == "":
-        right.pop()
-    return right
+    return [
+        ("GitHub", [
+            ("Username", USERNAME),
+            ("Uptime", uptime_str(user["created_at"])),
+            ("Location", "Switzerland"),
+        ]),
+        ("Contact", [
+            ("Website", "egorz.com"),
+            ("GitHub", f"github.com/{USERNAME}"),
+        ]),
+        ("Stats", [
+            ("Public Repos", str(public_repos)),
+            ("Total Stars", str(total_stars)),
+            ("Total Commits", str(total_commits)),
+            ("Followers", str(followers)),
+        ]),
+        ("Top Languages", [(lang, f"{pct:.1f}%") for lang, pct in top_langs]),
+    ]
 
 
-def build_table(ascii_lines, right_lines):
-    # Braille glyphs and regular ASCII text don't share a monospace grid
-    # reliably, so character-padding two columns together into one block
-    # drifts out of alignment. Rendering them as two independent <pre>
-    # blocks inside an HTML table sidesteps that: each column only needs
-    # to be internally consistent, not width-matched to the other.
-    ascii_block = "\n".join(ascii_lines)
-    stats_block = "\n".join(right_lines)
+def escape_xml(text):
     return (
-        "<table>\n<tr>\n<td>\n\n"
-        "```text\n" + ascii_block + "\n```\n\n"
-        "</td>\n<td valign=\"top\">\n\n"
-        "```text\n" + stats_block + "\n```\n\n"
-        "</td>\n</tr>\n</table>"
+        text.replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
     )
+
+
+# Pixel-positioned SVG, in the spirit of gitascii.com's widget renderers:
+# every line gets an explicit x/y instead of relying on a shared monospace
+# character grid, so braille art and regular text can never drift apart.
+FONT_SIZE = 15
+LINE_HEIGHT = 20
+CHAR_WIDTH = FONT_SIZE * 0.6
+LEFT_PAD = 20
+COLUMN_GAP = 40
+TOP_PAD = 24
+BOTTOM_PAD = 24
+FONT_FAMILY = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace"
+
+BG_COLOR = "#0d1117"
+BORDER_COLOR = "#30363d"
+ART_COLOR = "#c5ff4a"
+HEADER_COLOR = "#58a6ff"
+LABEL_COLOR = "#ffa657"
+VALUE_COLOR = "#c9d1d9"
+CONNECTOR_COLOR = "#7d8590"
+
+
+def build_svg(ascii_lines, sections):
+    right_lines = []  # each item: ("header" | "row", text-or-(label,value))
+    for title, rows in sections:
+        if right_lines:
+            right_lines.append(("gap", ""))
+        right_lines.append(("header", title))
+        for i, (label, value) in enumerate(rows):
+            connector = "└─" if i == len(rows) - 1 else "├─"
+            right_lines.append(("row", (connector, label, value)))
+
+    ascii_width = max((len(l) for l in ascii_lines), default=0) * CHAR_WIDTH
+    right_x = LEFT_PAD + ascii_width + COLUMN_GAP
+
+    height = TOP_PAD + BOTTOM_PAD + max(len(ascii_lines), len(right_lines)) * LINE_HEIGHT
+    width = right_x + 340
+
+    parts = []
+    parts.append(
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width:.0f}" height="{height:.0f}" '
+        f'viewBox="0 0 {width:.0f} {height:.0f}" font-family="{FONT_FAMILY}">'
+    )
+    parts.append(
+        f'<rect width="{width:.0f}" height="{height:.0f}" rx="12" fill="{BG_COLOR}" '
+        f'stroke="{BORDER_COLOR}"/>'
+    )
+
+    for i, line in enumerate(ascii_lines):
+        y = TOP_PAD + (i + 1) * LINE_HEIGHT
+        parts.append(
+            f'<text x="{LEFT_PAD}" y="{y:.1f}" font-size="{FONT_SIZE}" '
+            f'fill="{ART_COLOR}" xml:space="preserve">{escape_xml(line)}</text>'
+        )
+
+    for i, (kind, payload) in enumerate(right_lines):
+        y = TOP_PAD + (i + 1) * LINE_HEIGHT
+        if kind == "header":
+            parts.append(
+                f'<text x="{right_x:.1f}" y="{y:.1f}" font-size="{FONT_SIZE}" '
+                f'font-weight="700" fill="{HEADER_COLOR}">{escape_xml(payload)}</text>'
+            )
+        elif kind == "row":
+            connector, label, value = payload
+            parts.append(
+                f'<text x="{right_x:.1f}" y="{y:.1f}" font-size="{FONT_SIZE}" fill="{CONNECTOR_COLOR}">'
+                f'{connector} </text>'
+                f'<text x="{right_x + 3 * CHAR_WIDTH:.1f}" y="{y:.1f}" font-size="{FONT_SIZE}" '
+                f'fill="{LABEL_COLOR}">{escape_xml(label)}</text>'
+                f'<text x="{right_x + (3 + len(label) + 1) * CHAR_WIDTH:.1f}" y="{y:.1f}" '
+                f'font-size="{FONT_SIZE}" fill="{CONNECTOR_COLOR}"> ➜ </text>'
+                f'<text x="{right_x + (3 + len(label) + 5) * CHAR_WIDTH:.1f}" y="{y:.1f}" '
+                f'font-size="{FONT_SIZE}" fill="{VALUE_COLOR}">{escape_xml(value)}</text>'
+            )
+
+    parts.append("</svg>")
+    return "\n".join(parts)
 
 
 def main():
@@ -187,12 +238,18 @@ def main():
     repo_root = os.path.dirname(script_dir)
     ascii_path = os.path.join(repo_root, "ascii_art.txt")
     readme_path = os.path.join(repo_root, "README.md")
+    svg_path = os.path.join(repo_root, "profile-card.svg")
 
     with open(ascii_path, "r", encoding="utf-8") as f:
         ascii_lines = f.read().splitlines()
 
-    right_lines = build_stats_lines()
-    block = build_table(ascii_lines, right_lines)
+    user = get_user()
+    repos = get_repos()
+    sections = build_sections(user, repos)
+    svg = build_svg(ascii_lines, sections)
+
+    with open(svg_path, "w", encoding="utf-8") as f:
+        f.write(svg)
 
     with open(readme_path, "r", encoding="utf-8") as f:
         readme = f.read()
@@ -201,6 +258,7 @@ def main():
     end_marker = "<!--STATS:END-->"
     start_idx = readme.index(start_marker) + len(start_marker)
     end_idx = readme.index(end_marker)
+    block = '<img src="./profile-card.svg" alt="rs4t GitHub stats" />'
     new_readme = readme[:start_idx] + "\n" + block + "\n" + readme[end_idx:]
 
     with open(readme_path, "w", encoding="utf-8") as f:
