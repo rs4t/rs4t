@@ -162,18 +162,18 @@ FONT_SIZE = 15
 LINE_HEIGHT = 20
 CHAR_WIDTH = FONT_SIZE * 0.6
 LEFT_PAD = 20
-COLUMN_GAP = 40
+COLUMN_GAP = 90
 TOP_PAD = 24
 BOTTOM_PAD = 24
 FONT_FAMILY = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace"
 
-BG_COLOR = "#0d1117"
-BORDER_COLOR = "#30363d"
-ART_COLOR = "#c5ff4a"
-HEADER_COLOR = "#58a6ff"
-LABEL_COLOR = "#ffa657"
-VALUE_COLOR = "#c9d1d9"
-CONNECTOR_COLOR = "#7d8590"
+BG_COLOR = "#170808"
+BORDER_COLOR = "#4a1414"
+ART_COLOR = "#ff5f5f"
+HEADER_COLOR = "#ff3b3b"
+LABEL_COLOR = "#ff8c69"
+VALUE_COLOR = "#f2d0c9"
+CONNECTOR_COLOR = "#8a4a4a"
 
 
 def build_svg(ascii_lines, sections):
