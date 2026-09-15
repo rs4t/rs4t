@@ -165,14 +165,22 @@ def build_stats_lines():
     return right
 
 
+BRAILLE_BLANK = "⠀"
+GAP_CELLS = 3
+
+
 def combine(ascii_lines, right_lines):
+    # Pad with braille-blank cells (not regular spaces) so the left column stays
+    # in one consistent glyph width: braille glyphs often render at a different
+    # width than plain ASCII spaces, and mixing the two throws off alignment.
     width = max((len(l) for l in ascii_lines), default=0)
     height = max(len(ascii_lines), len(right_lines))
     out = []
     for i in range(height):
         left = ascii_lines[i] if i < len(ascii_lines) else ""
         right = right_lines[i] if i < len(right_lines) else ""
-        out.append(f"{left.ljust(width)}   {right}".rstrip())
+        pad = BRAILLE_BLANK * (width - len(left) + GAP_CELLS)
+        out.append(f"{left}{pad}{right}" if right else left)
     return out
 
 
