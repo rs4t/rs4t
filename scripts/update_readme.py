@@ -176,7 +176,10 @@ VALUE_COLOR = "#f2d0c9"
 CONNECTOR_COLOR = "#c05656"
 
 
-def build_svg(ascii_lines, sections):
+ART_CYCLE_SECONDS = 30
+
+
+def build_svg(ascii_art_sets, sections):
     right_lines = []  # each item: ("header" | "row", text-or-(label,value))
     for title, rows in sections:
         if right_lines:
@@ -186,7 +189,9 @@ def build_svg(ascii_lines, sections):
             connector = "└─" if i == len(rows) - 1 else "├─"
             right_lines.append(("row", (connector, label, value)))
 
-    ascii_width = max((len(l) for l in ascii_lines), default=0) * CHAR_WIDTH
+    ascii_width = max(
+        (len(line) for art in ascii_art_sets for line in art), default=0
+    ) * CHAR_WIDTH
     right_x = LEFT_PAD + ascii_width + COLUMN_GAP
 
     def line_width(kind, payload):
@@ -201,7 +206,8 @@ def build_svg(ascii_lines, sections):
         default=0,
     )
 
-    height = TOP_PAD + BOTTOM_PAD + max(len(ascii_lines), len(right_lines)) * LINE_HEIGHT
+    max_art_lines = max((len(art) for art in ascii_art_sets), default=0)
+    height = TOP_PAD + BOTTOM_PAD + max(max_art_lines, len(right_lines)) * LINE_HEIGHT
     width = right_x + max_right_chars * CHAR_WIDTH + RIGHT_PAD
 
     parts = []
@@ -214,12 +220,32 @@ def build_svg(ascii_lines, sections):
         f'stroke="{BORDER_COLOR}"/>'
     )
 
-    for i, line in enumerate(ascii_lines):
-        y = TOP_PAD + (i + 1) * LINE_HEIGHT
-        parts.append(
-            f'<text x="{LEFT_PAD}" y="{y:.1f}" font-size="{FONT_SIZE}" '
-            f'fill="{ART_COLOR}" xml:space="preserve">{escape_xml(line)}</text>'
-        )
+    # Layer every art at the same position and cross-fade between them with
+    # native SMIL animation (a plain <img> can't run JS, but SVG can animate
+    # itself): each <g> is opaque only during its slice of a shared cycle,
+    # stepped with calcMode="discrete" so there's no fade blending glyphs.
+    art_count = len(ascii_art_sets)
+    total_dur = ART_CYCLE_SECONDS * art_count
+    for art_index, ascii_lines in enumerate(ascii_art_sets):
+        values = ["1" if k == art_index else "0" for k in range(art_count)] + ["0"]
+        key_times = [k / art_count for k in range(art_count + 1)]
+        art_parts = []
+        for i, line in enumerate(ascii_lines):
+            y = TOP_PAD + (i + 1) * LINE_HEIGHT
+            art_parts.append(
+                f'<text x="{LEFT_PAD}" y="{y:.1f}" font-size="{FONT_SIZE}" '
+                f'fill="{ART_COLOR}" xml:space="preserve">{escape_xml(line)}</text>'
+            )
+        parts.append(f'<g opacity="{values[0]}">')
+        parts.extend(art_parts)
+        if art_count > 1:
+            parts.append(
+                '<animate attributeName="opacity" calcMode="discrete" '
+                f'begin="0s" dur="{total_dur}s" repeatCount="indefinite" '
+                f'keyTimes="{";".join(f"{t:.4f}" for t in key_times)}" '
+                f'values="{";".join(values)}"/>'
+            )
+        parts.append("</g>")
 
     for i, (kind, payload) in enumerate(right_lines):
         y = TOP_PAD + (i + 1) * LINE_HEIGHT
@@ -248,17 +274,18 @@ def build_svg(ascii_lines, sections):
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     repo_root = os.path.dirname(script_dir)
-    ascii_path = os.path.join(repo_root, "ascii_art.txt")
+    ascii_arts_path = os.path.join(repo_root, "ascii_arts.txt")
     readme_path = os.path.join(repo_root, "README.md")
     svg_path = os.path.join(repo_root, "profile-card.svg")
 
-    with open(ascii_path, "r", encoding="utf-8") as f:
-        ascii_lines = f.read().splitlines()
+    with open(ascii_arts_path, "r", encoding="utf-8") as f:
+        raw_arts = f.read().split("\n===\n")
+    ascii_art_sets = [art.splitlines() for art in raw_arts if art.strip()]
 
     user = get_user()
     repos = get_repos()
     sections = build_sections(user, repos)
-    svg = build_svg(ascii_lines, sections)
+    svg = build_svg(ascii_art_sets, sections)
 
     with open(svg_path, "w", encoding="utf-8") as f:
         f.write(svg)
