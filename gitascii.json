@@ -1,4 +1,5 @@
 {
+  "username": "rs4t",
   "widgets": [
     {
       "widgetId": "header",
@@ -11549,9 +11550,12 @@
         "statsValColor": "#79c0ff",
         "dividerColor": "#30363d",
         "showTimezone": true,
-        "showLanguages": false,
+        "showLanguages": true,
         "animationType": "slide-left",
-        "animationPreviewKey": 1
+        "animationPreviewKey": 1,
+        "showFollowing": false,
+        "showAchievements": false,
+        "showStatus": false
       },
       "locked": false,
       "visible": true,
@@ -11624,5 +11628,6 @@
     "themeMode": "dark",
     "templateStyle": "native"
   },
-  "templateId": "native"
+  "templateId": "native",
+  "profileSlug": "default"
 }
