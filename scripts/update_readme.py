@@ -279,9 +279,13 @@ def main():
     # address instead of a relative path GitHub can resolve differently
     # depending on where it's viewed from.
     cache_bust = hashlib.sha256(svg.encode("utf-8")).hexdigest()[:12]
+    # width="100%" stretches the image to the README's actual content column
+    # width instead of rendering at the SVG's own intrinsic pixel size,
+    # which is narrower than the profile page container and left empty
+    # space on the right.
     block = (
         f'<img src="https://raw.githubusercontent.com/{USERNAME}/{USERNAME}/main/'
-        f'profile-card.svg?v={cache_bust}" alt="rs4t GitHub stats" />'
+        f'profile-card.svg?v={cache_bust}" alt="rs4t GitHub stats" width="100%" />'
     )
     new_readme = readme[:start_idx] + "\n" + block + "\n" + readme[end_idx:]
 
