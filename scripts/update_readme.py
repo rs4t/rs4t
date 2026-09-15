@@ -165,23 +165,21 @@ def build_stats_lines():
     return right
 
 
-BRAILLE_BLANK = "⠀"
-GAP_CELLS = 3
-
-
-def combine(ascii_lines, right_lines):
-    # Pad with braille-blank cells (not regular spaces) so the left column stays
-    # in one consistent glyph width: braille glyphs often render at a different
-    # width than plain ASCII spaces, and mixing the two throws off alignment.
-    width = max((len(l) for l in ascii_lines), default=0)
-    height = max(len(ascii_lines), len(right_lines))
-    out = []
-    for i in range(height):
-        left = ascii_lines[i] if i < len(ascii_lines) else ""
-        right = right_lines[i] if i < len(right_lines) else ""
-        pad = BRAILLE_BLANK * (width - len(left) + GAP_CELLS)
-        out.append(f"{left}{pad}{right}" if right else left)
-    return out
+def build_table(ascii_lines, right_lines):
+    # Braille glyphs and regular ASCII text don't share a monospace grid
+    # reliably, so character-padding two columns together into one block
+    # drifts out of alignment. Rendering them as two independent <pre>
+    # blocks inside an HTML table sidesteps that: each column only needs
+    # to be internally consistent, not width-matched to the other.
+    ascii_block = "\n".join(ascii_lines)
+    stats_block = "\n".join(right_lines)
+    return (
+        "<table>\n<tr>\n<td>\n\n"
+        "```text\n" + ascii_block + "\n```\n\n"
+        "</td>\n<td valign=\"top\">\n\n"
+        "```text\n" + stats_block + "\n```\n\n"
+        "</td>\n</tr>\n</table>"
+    )
 
 
 def main():
@@ -194,9 +192,7 @@ def main():
         ascii_lines = f.read().splitlines()
 
     right_lines = build_stats_lines()
-    combined = combine(ascii_lines, right_lines)
-
-    block = "```text\n" + "\n".join(combined) + "\n```"
+    block = build_table(ascii_lines, right_lines)
 
     with open(readme_path, "r", encoding="utf-8") as f:
         readme = f.read()
