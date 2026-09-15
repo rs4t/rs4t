@@ -2,8 +2,8 @@
 """Fetch GitHub stats for rs4t and rewrite the neofetch-style block in README.md."""
 import os
 import sys
-import time
 import datetime
+import hashlib
 import urllib.request
 import json
 import base64
@@ -259,11 +259,17 @@ def main():
     end_marker = "<!--STATS:END-->"
     start_idx = readme.index(start_marker) + len(start_marker)
     end_idx = readme.index(end_marker)
-    # GitHub's CDN caches raw SVGs by URL, so a plain relative path can keep
-    # serving a stale version after each update. A changing query string
-    # busts that cache on every run.
-    cache_bust = int(time.time())
-    block = f'<img src="./profile-card.svg?v={cache_bust}" alt="rs4t GitHub stats" />'
+    # GitHub's CDN and browsers cache raw SVGs by URL. Key the cache-buster
+    # off a hash of the SVG's own content (stable, and only ever changes
+    # when the image actually changes) and use the absolute
+    # raw.githubusercontent.com URL so caching keys off one canonical
+    # address instead of a relative path GitHub can resolve differently
+    # depending on where it's viewed from.
+    cache_bust = hashlib.sha256(svg.encode("utf-8")).hexdigest()[:12]
+    block = (
+        f'<img src="https://raw.githubusercontent.com/{USERNAME}/{USERNAME}/main/'
+        f'profile-card.svg?v={cache_bust}" alt="rs4t GitHub stats" />'
+    )
     new_readme = readme[:start_idx] + "\n" + block + "\n" + readme[end_idx:]
 
     with open(readme_path, "w", encoding="utf-8") as f:
