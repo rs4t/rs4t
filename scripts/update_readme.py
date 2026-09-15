@@ -159,14 +159,14 @@ def escape_xml(text):
 # Pixel-positioned SVG: every line gets an explicit x/y instead of relying
 # on a shared monospace character grid, so braille art and regular text
 # can never drift apart.
-FONT_SIZE = 18
-LINE_HEIGHT = 24
+FONT_SIZE = 15
+LINE_HEIGHT = 20
 CHAR_WIDTH = FONT_SIZE * 0.6
-LEFT_PAD = 24
-COLUMN_GAP = 100
-RIGHT_PAD = 30
-TOP_PAD = 28
-BOTTOM_PAD = 28
+LEFT_PAD = 20
+COLUMN_GAP = 150
+RIGHT_PAD = 20
+TOP_PAD = 24
+BOTTOM_PAD = 24
 FONT_FAMILY = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace"
 
 BG_COLOR = "#0d1117"
