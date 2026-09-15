@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="703" height="448" viewBox="0 0 703 448" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">
-<rect width="703" height="448" rx="12" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="703" height="368" viewBox="0 0 703 368" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">
+<rect width="703" height="368" rx="12" fill="#0d1117" stroke="#30363d"/>
 <text x="20" y="44.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢸⠓⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
 <text x="20" y="64.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢸⠀⠀⠑⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
 <text x="20" y="84.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀⠙⢤⡷⣤⣦⣀⠤⠖⠚⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
@@ -27,10 +27,5 @@
 <text x="440.0" y="244.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="244.0" font-size="15" fill="#ff8c69">Public Repos</text><text x="584.0" y="244.0" font-size="15" fill="#c05656"> ➜ </text><text x="620.0" y="244.0" font-size="15" fill="#f2d0c9">7</text>
 <text x="440.0" y="264.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="264.0" font-size="15" fill="#ff8c69">Total Stars</text><text x="575.0" y="264.0" font-size="15" fill="#c05656"> ➜ </text><text x="611.0" y="264.0" font-size="15" fill="#f2d0c9">12</text>
 <text x="440.0" y="284.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="284.0" font-size="15" fill="#ff8c69">Total Commits</text><text x="593.0" y="284.0" font-size="15" fill="#c05656"> ➜ </text><text x="629.0" y="284.0" font-size="15" fill="#f2d0c9">74</text>
-<text x="440.0" y="304.0" font-size="15" fill="#c05656">└─ </text><text x="467.0" y="304.0" font-size="15" fill="#ff8c69">Followers</text><text x="557.0" y="304.0" font-size="15" fill="#c05656"> ➜ </text><text x="593.0" y="304.0" font-size="15" fill="#f2d0c9">5</text>
-<text x="440.0" y="344.0" font-size="15" font-weight="700" fill="#ff3b3b">Top Languages</text>
-<text x="440.0" y="364.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="364.0" font-size="15" fill="#ff8c69">C++</text><text x="503.0" y="364.0" font-size="15" fill="#c05656"> ➜ </text><text x="539.0" y="364.0" font-size="15" fill="#f2d0c9">46.1%</text>
-<text x="440.0" y="384.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="384.0" font-size="15" fill="#ff8c69">Python</text><text x="530.0" y="384.0" font-size="15" fill="#c05656"> ➜ </text><text x="566.0" y="384.0" font-size="15" fill="#f2d0c9">45.3%</text>
-<text x="440.0" y="404.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="404.0" font-size="15" fill="#ff8c69">JavaScript</text><text x="566.0" y="404.0" font-size="15" fill="#c05656"> ➜ </text><text x="602.0" y="404.0" font-size="15" fill="#f2d0c9">3.0%</text>
-<text x="440.0" y="424.0" font-size="15" fill="#c05656">└─ </text><text x="467.0" y="424.0" font-size="15" fill="#ff8c69">CSS</text><text x="503.0" y="424.0" font-size="15" fill="#c05656"> ➜ </text><text x="539.0" y="424.0" font-size="15" fill="#f2d0c9">1.9%</text>
+<text x="440.0" y="304.0" font-size="15" fill="#c05656">└─ </text><text x="467.0" y="304.0" font-size="15" fill="#ff8c69">Followers</text><text x="557.0" y="304.0" font-size="15" fill="#c05656"> ➜ </text><text x="593.0" y="304.0" font-size="15" fill="#f2d0c9">6</text>
 </svg>

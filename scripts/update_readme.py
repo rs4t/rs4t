@@ -126,7 +126,6 @@ def build_sections(user, repos):
     total_stars = get_total_stars(repos)
     total_commits = get_total_commits(repos)
     followers = user.get("followers", 0)
-    top_langs = get_top_languages(repos)
 
     return [
         ("GitHub", [
@@ -144,7 +143,6 @@ def build_sections(user, repos):
             ("Total Commits", str(total_commits)),
             ("Followers", str(followers)),
         ]),
-        ("Top Languages", [(lang, f"{pct:.1f}%") for lang, pct in top_langs]),
     ]
 
 
