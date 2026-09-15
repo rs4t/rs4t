@@ -134,7 +134,7 @@ def build_sections(user, repos):
             ("Location", "Switzerland"),
         ]),
         ("Contact", [
-            ("Website", "egorz.com"),
+            ("Website", "zegg.me"),
             ("GitHub", f"github.com/{USERNAME}"),
         ]),
         ("Stats", [
