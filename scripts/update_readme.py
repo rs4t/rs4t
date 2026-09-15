@@ -156,25 +156,26 @@ def escape_xml(text):
     )
 
 
-# Pixel-positioned SVG, in the spirit of gitascii.com's widget renderers:
-# every line gets an explicit x/y instead of relying on a shared monospace
-# character grid, so braille art and regular text can never drift apart.
-FONT_SIZE = 15
-LINE_HEIGHT = 20
+# Pixel-positioned SVG: every line gets an explicit x/y instead of relying
+# on a shared monospace character grid, so braille art and regular text
+# can never drift apart.
+FONT_SIZE = 18
+LINE_HEIGHT = 24
 CHAR_WIDTH = FONT_SIZE * 0.6
-LEFT_PAD = 20
-COLUMN_GAP = 90
-TOP_PAD = 24
-BOTTOM_PAD = 24
+LEFT_PAD = 24
+COLUMN_GAP = 100
+RIGHT_PAD = 30
+TOP_PAD = 28
+BOTTOM_PAD = 28
 FONT_FAMILY = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace"
 
-BG_COLOR = "#170808"
-BORDER_COLOR = "#4a1414"
+BG_COLOR = "#0d1117"
+BORDER_COLOR = "#30363d"
 ART_COLOR = "#ff5f5f"
 HEADER_COLOR = "#ff3b3b"
 LABEL_COLOR = "#ff8c69"
 VALUE_COLOR = "#f2d0c9"
-CONNECTOR_COLOR = "#8a4a4a"
+CONNECTOR_COLOR = "#c05656"
 
 
 def build_svg(ascii_lines, sections):
@@ -190,8 +191,20 @@ def build_svg(ascii_lines, sections):
     ascii_width = max((len(l) for l in ascii_lines), default=0) * CHAR_WIDTH
     right_x = LEFT_PAD + ascii_width + COLUMN_GAP
 
+    def line_width(kind, payload):
+        if kind == "header":
+            return len(payload)
+        connector, label, value = payload
+        # connector(2) + space + label + " ➜ " + value, in character cells
+        return 2 + 1 + len(label) + 3 + len(value)
+
+    max_right_chars = max(
+        (line_width(kind, payload) for kind, payload in right_lines if kind != "gap"),
+        default=0,
+    )
+
     height = TOP_PAD + BOTTOM_PAD + max(len(ascii_lines), len(right_lines)) * LINE_HEIGHT
-    width = right_x + 340
+    width = right_x + max_right_chars * CHAR_WIDTH + RIGHT_PAD
 
     parts = []
     parts.append(
