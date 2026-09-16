@@ -34,6 +34,10 @@ HEADER_COLOR = "#ff3b3b"
 LABEL_COLOR = "#ff8c69"
 VALUE_COLOR = "#f2d0c9"
 CONNECTOR_COLOR = "#c05656"
+PROMPT_COLOR = "#8a4a4a"
+
+PROMPT_TEXT = f"{USERNAME}@github:~$ gitfetch"
+CONTENT_TOP = TOP_PAD + LINE_HEIGHT + 10
 
 
 def make_headers(token):
@@ -192,10 +196,21 @@ def _line_width(kind, payload):
     return 2 + 1 + len(label) + 3 + len(value)
 
 
+def _prompt_text(width):
+    y = TOP_PAD + LINE_HEIGHT * 0.75
+    return [
+        f'<text x="{LEFT_PAD}" y="{y:.1f}" font-size="{FONT_SIZE}" '
+        f'fill="{PROMPT_COLOR}" xml:space="preserve">{escape_xml(PROMPT_TEXT)}</text>',
+        f'<line x1="{LEFT_PAD}" y1="{CONTENT_TOP - LINE_HEIGHT * 0.35:.1f}" '
+        f'x2="{width - RIGHT_PAD:.1f}" y2="{CONTENT_TOP - LINE_HEIGHT * 0.35:.1f}" '
+        f'stroke="{BORDER_COLOR}"/>',
+    ]
+
+
 def _art_text(ascii_lines):
     parts = []
     for i, line in enumerate(ascii_lines):
-        y = TOP_PAD + (i + 1) * LINE_HEIGHT
+        y = CONTENT_TOP + (i + 1) * LINE_HEIGHT
         parts.append(
             f'<text x="{LEFT_PAD}" y="{y:.1f}" font-size="{FONT_SIZE}" '
             f'fill="{ART_COLOR}" xml:space="preserve">{escape_xml(line)}</text>'
@@ -206,7 +221,7 @@ def _art_text(ascii_lines):
 def _stats_text(right_lines, right_x):
     parts = []
     for i, (kind, payload) in enumerate(right_lines):
-        y = TOP_PAD + (i + 1) * LINE_HEIGHT
+        y = CONTENT_TOP + (i + 1) * LINE_HEIGHT
         if kind == "header":
             parts.append(
                 f'<text x="{right_x:.1f}" y="{y:.1f}" font-size="{FONT_SIZE}" '
@@ -256,10 +271,10 @@ def build_svg_animated(ascii_art_sets, sections):
         default=0,
     )
     max_art_lines = max((len(art) for art in ascii_art_sets), default=0)
-    height = TOP_PAD + BOTTOM_PAD + max(max_art_lines, len(right_lines)) * LINE_HEIGHT
+    height = CONTENT_TOP + BOTTOM_PAD + max(max_art_lines, len(right_lines)) * LINE_HEIGHT
     width = right_x + max_right_chars * CHAR_WIDTH + RIGHT_PAD
 
-    body = []
+    body = _prompt_text(width)
     art_count = len(ascii_art_sets)
     total_dur = ART_CYCLE_SECONDS * art_count
     for art_index, ascii_lines in enumerate(ascii_art_sets):
@@ -297,10 +312,10 @@ def build_svg_frame(ascii_art_sets, sections, art_index):
         default=0,
     )
     max_art_lines = max((len(art) for art in ascii_art_sets), default=0)
-    height = TOP_PAD + BOTTOM_PAD + max(max_art_lines, len(right_lines)) * LINE_HEIGHT
+    height = CONTENT_TOP + BOTTOM_PAD + max(max_art_lines, len(right_lines)) * LINE_HEIGHT
     width = right_x + max_right_chars * CHAR_WIDTH + RIGHT_PAD
 
-    body = _art_text(ascii_lines) + _stats_text(right_lines, right_x)
+    body = _prompt_text(width) + _art_text(ascii_lines) + _stats_text(right_lines, right_x)
     return _svg_frame(width, height, body)
 
 

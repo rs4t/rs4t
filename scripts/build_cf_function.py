@@ -34,6 +34,9 @@ const HEADER_COLOR = {header_color!r};
 const LABEL_COLOR = {label_color!r};
 const VALUE_COLOR = {value_color!r};
 const CONNECTOR_COLOR = {connector_color!r};
+const PROMPT_COLOR = {prompt_color!r};
+const PROMPT_TEXT = {prompt_text!r};
+const CONTENT_TOP = TOP_PAD + LINE_HEIGHT + 10;
 
 const ASCII_ARTS = {ascii_arts_json};
 
@@ -168,7 +171,7 @@ function buildSvgFrame(asciiArtSets, sections, artIndex) {{
   );
   const maxArtLines = Math.max(...asciiArtSets.map((a) => a.length));
   const height =
-    TOP_PAD + BOTTOM_PAD + Math.max(maxArtLines, rightLines.length) * LINE_HEIGHT;
+    CONTENT_TOP + BOTTOM_PAD + Math.max(maxArtLines, rightLines.length) * LINE_HEIGHT;
   const width = rightX + maxRightChars * CHAR_WIDTH + RIGHT_PAD;
 
   const parts = [];
@@ -179,15 +182,24 @@ function buildSvgFrame(asciiArtSets, sections, artIndex) {{
     `<rect width="${{width.toFixed(0)}}" height="${{height.toFixed(0)}}" rx="12" fill="${{BG_COLOR}}" stroke="${{BORDER_COLOR}}"/>`
   );
 
+  const promptY = TOP_PAD + LINE_HEIGHT * 0.75;
+  const ruleY = CONTENT_TOP - LINE_HEIGHT * 0.35;
+  parts.push(
+    `<text x="${{LEFT_PAD}}" y="${{promptY.toFixed(1)}}" font-size="${{FONT_SIZE}}" fill="${{PROMPT_COLOR}}" xml:space="preserve">${{escapeXml(PROMPT_TEXT)}}</text>`
+  );
+  parts.push(
+    `<line x1="${{LEFT_PAD}}" y1="${{ruleY.toFixed(1)}}" x2="${{(width - RIGHT_PAD).toFixed(1)}}" y2="${{ruleY.toFixed(1)}}" stroke="${{BORDER_COLOR}}"/>`
+  );
+
   asciiLines.forEach((line, i) => {{
-    const y = TOP_PAD + (i + 1) * LINE_HEIGHT;
+    const y = CONTENT_TOP + (i + 1) * LINE_HEIGHT;
     parts.push(
       `<text x="${{LEFT_PAD}}" y="${{y.toFixed(1)}}" font-size="${{FONT_SIZE}}" fill="${{ART_COLOR}}" xml:space="preserve">${{escapeXml(line)}}</text>`
     );
   }});
 
   rightLines.forEach(([kind, payload], i) => {{
-    const y = TOP_PAD + (i + 1) * LINE_HEIGHT;
+    const y = CONTENT_TOP + (i + 1) * LINE_HEIGHT;
     if (kind === "header") {{
       parts.push(
         `<text x="${{rightX.toFixed(1)}}" y="${{y.toFixed(1)}}" font-size="${{FONT_SIZE}}" font-weight="700" fill="${{HEADER_COLOR}}">${{escapeXml(payload)}}</text>`
@@ -343,6 +355,8 @@ def main():
         label_color=cardlib.LABEL_COLOR,
         value_color=cardlib.VALUE_COLOR,
         connector_color=cardlib.CONNECTOR_COLOR,
+        prompt_color=cardlib.PROMPT_COLOR,
+        prompt_text=cardlib.PROMPT_TEXT,
         ascii_arts_json=json.dumps(ascii_art_sets, ensure_ascii=False),
     )
 

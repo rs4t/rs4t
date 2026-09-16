@@ -1,121 +1,123 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="703" height="368" viewBox="0 0 703 368" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">
-<rect width="703" height="368" rx="12" fill="#0d1117" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="703" height="398" viewBox="0 0 703 398" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace">
+<rect width="703" height="398" rx="12" fill="#0d1117" stroke="#30363d"/>
+<text x="20" y="39.0" font-size="15" fill="#8a4a4a" xml:space="preserve">rs4t@github:~$ gitfetch</text>
+<line x1="20" y1="47.0" x2="683.0" y2="47.0" stroke="#30363d"/>
 <g opacity="1">
-<text x="20" y="44.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢸⠓⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="64.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢸⠀⠀⠑⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="84.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀⠙⢤⡷⣤⣦⣀⠤⠖⠚⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="104.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⣠⡿⠢⢄⡀⠀⡇⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠸⠷⣶⠂⠀⠀⠀⣀⣀⠀⠀⠀</text>
-<text x="20" y="124.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢸⣃⠀⠀⠉⠳⣷⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⢉⡭⠋</text>
-<text x="20" y="144.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠘⣆⠀⠀⠀⠁⠀⢀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠀⠀</text>
-<text x="20" y="164.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠘⣦⠆⠀⠀⢀⡎⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⡀⣠⠔⠋⠀⠀⠀⠀</text>
-<text x="20" y="184.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⡏⠀⠀⣆⠘⣄⠸⢧⠀⠀⠀⠀⢀⣠⠖⢻⠀⠀⠀⣿⢥⣄⣀⣀⣀⠀⠀</text>
-<text x="20" y="204.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⢸⠁⠀⠀⡏⢣⣌⠙⠚⠀⠀⠠⣖⡛⠀⣠⠏⠀⠀⠀⠇⠀⠀⠀⠀⢙⣣⠄</text>
-<text x="20" y="224.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⢸⡀⠀⠀⠳⡞⠈⢻⠶⠤⣄⣀⣈⣉⣉⣡⡔⠀⠀⢀⠀⠀⣀⡤⠖⠚⠀⠀</text>
-<text x="20" y="244.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⡼⣇⠀⠀⠀⠙⠦⣞⡀⠀⢀⡏⠀⢸⣣⠞⠀⠀⠀⡼⠚⠋⠁⠀⠀⠀⠀⠀</text>
-<text x="20" y="264.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢰⡇⠙⠀⠀⠀⠀⠀⠀⠉⠙⠚⠒⠚⠉⠀⠀⠀⠀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="284.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⢧⡀⠀⢠⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="304.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠙⣶⣶⣿⠢⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="324.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠉⠀⠀⠀⠙⢿⣳⠞⠳⡄⠀⠀⠀⢀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="344.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠹⣄⣀⡤⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="74.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢸⠓⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="94.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢸⠀⠀⠑⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="114.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀⠙⢤⡷⣤⣦⣀⠤⠖⠚⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="134.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⣠⡿⠢⢄⡀⠀⡇⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠸⠷⣶⠂⠀⠀⠀⣀⣀⠀⠀⠀</text>
+<text x="20" y="154.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢸⣃⠀⠀⠉⠳⣷⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠉⠉⢉⡭⠋</text>
+<text x="20" y="174.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠘⣆⠀⠀⠀⠁⠀⢀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠋⠀⠀</text>
+<text x="20" y="194.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠘⣦⠆⠀⠀⢀⡎⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⡀⣠⠔⠋⠀⠀⠀⠀</text>
+<text x="20" y="214.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⡏⠀⠀⣆⠘⣄⠸⢧⠀⠀⠀⠀⢀⣠⠖⢻⠀⠀⠀⣿⢥⣄⣀⣀⣀⠀⠀</text>
+<text x="20" y="234.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⢸⠁⠀⠀⡏⢣⣌⠙⠚⠀⠀⠠⣖⡛⠀⣠⠏⠀⠀⠀⠇⠀⠀⠀⠀⢙⣣⠄</text>
+<text x="20" y="254.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⢸⡀⠀⠀⠳⡞⠈⢻⠶⠤⣄⣀⣈⣉⣉⣡⡔⠀⠀⢀⠀⠀⣀⡤⠖⠚⠀⠀</text>
+<text x="20" y="274.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⡼⣇⠀⠀⠀⠙⠦⣞⡀⠀⢀⡏⠀⢸⣣⠞⠀⠀⠀⡼⠚⠋⠁⠀⠀⠀⠀⠀</text>
+<text x="20" y="294.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢰⡇⠙⠀⠀⠀⠀⠀⠀⠉⠙⠚⠒⠚⠉⠀⠀⠀⠀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="314.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⢧⡀⠀⢠⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="334.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠙⣶⣶⣿⠢⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="354.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠉⠀⠀⠀⠙⢿⣳⠞⠳⡄⠀⠀⠀⢀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="374.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠹⣄⣀⡤⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
 <animate attributeName="opacity" calcMode="discrete" begin="0s" dur="180s" repeatCount="indefinite" keyTimes="0.0000;0.1667;0.3333;0.5000;0.6667;0.8333;1.0000" values="1;0;0;0;0;0;0"/>
 </g>
 <g opacity="0">
-<text x="20" y="44.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠞⢳⠀⠀⠀⠀⠀</text>
-<text x="20" y="64.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠋⠀⢰⠎⠀⠀⠀⠀⠀</text>
-<text x="20" y="84.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⢆⣤⡞⠃⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="104.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⢠⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="124.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⢀⣀⣾⢳⠀⠀⠀⠀⢸⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="144.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⣀⡤⠴⠊⠉⠀⠀⠈⠳⡀⠀⠀⠘⢎⠢⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="164.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠳⣄⠀⠀⡠⡤⡀⠀⠘⣇⡀⠀⠀⠀⠉⠓⠒⠺⠭⢵⣦⡀⠀⠀⠀</text>
-<text x="20" y="184.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢹⡆⠀⢷⡇⠁⠀⠀⣸⠇⠀⠀⠀⠀⠀⢠⢤⠀⠀⠘⢷⣆⡀⠀</text>
-<text x="20" y="204.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠘⠒⢤⡄⠖⢾⣭⣤⣄⠀⡔⢢⠀⡀⠎⣸⠀⠀⠀⠀⠹⣿⡀</text>
-<text x="20" y="224.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⢀⡤⠜⠃⠀⠀⠘⠛⣿⢸⠀⡼⢠⠃⣤⡟⠀⠀⠀⠀⠀⣿⡇</text>
-<text x="20" y="244.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠸⠶⠖⢏⠀⠀⢀⡤⠤⠇⣴⠏⡾⢱⡏⠁⠀⠀⠀⠀⢠⣿⠃</text>
-<text x="20" y="264.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠈⣇⡀⠿⠀⠀⠀⡽⣰⢶⡼⠇⠀⠀⠀⠀⣠⣿⠟⠀</text>
-<text x="20" y="284.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠈⠳⢤⣀⡶⠤⣷⣅⡀⠀⠀⠀⣀⡠⢔⠕⠁⠀⠀</text>
-<text x="20" y="304.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠫⠿⠿⠿⠛⠋⠁⠀⠀⠀⠀</text>
+<text x="20" y="74.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠞⢳⠀⠀⠀⠀⠀</text>
+<text x="20" y="94.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠋⠀⢰⠎⠀⠀⠀⠀⠀</text>
+<text x="20" y="114.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⢆⣤⡞⠃⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="134.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⢠⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="154.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⢀⣀⣾⢳⠀⠀⠀⠀⢸⢠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="174.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⣀⡤⠴⠊⠉⠀⠀⠈⠳⡀⠀⠀⠘⢎⠢⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="194.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠳⣄⠀⠀⡠⡤⡀⠀⠘⣇⡀⠀⠀⠀⠉⠓⠒⠺⠭⢵⣦⡀⠀⠀⠀</text>
+<text x="20" y="214.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢹⡆⠀⢷⡇⠁⠀⠀⣸⠇⠀⠀⠀⠀⠀⢠⢤⠀⠀⠘⢷⣆⡀⠀</text>
+<text x="20" y="234.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠘⠒⢤⡄⠖⢾⣭⣤⣄⠀⡔⢢⠀⡀⠎⣸⠀⠀⠀⠀⠹⣿⡀</text>
+<text x="20" y="254.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⢀⡤⠜⠃⠀⠀⠘⠛⣿⢸⠀⡼⢠⠃⣤⡟⠀⠀⠀⠀⠀⣿⡇</text>
+<text x="20" y="274.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠸⠶⠖⢏⠀⠀⢀⡤⠤⠇⣴⠏⡾⢱⡏⠁⠀⠀⠀⠀⢠⣿⠃</text>
+<text x="20" y="294.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠈⣇⡀⠿⠀⠀⠀⡽⣰⢶⡼⠇⠀⠀⠀⠀⣠⣿⠟⠀</text>
+<text x="20" y="314.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠈⠳⢤⣀⡶⠤⣷⣅⡀⠀⠀⠀⣀⡠⢔⠕⠁⠀⠀</text>
+<text x="20" y="334.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠫⠿⠿⠿⠛⠋⠁⠀⠀⠀⠀</text>
 <animate attributeName="opacity" calcMode="discrete" begin="0s" dur="180s" repeatCount="indefinite" keyTimes="0.0000;0.1667;0.3333;0.5000;0.6667;0.8333;1.0000" values="0;1;0;0;0;0;0"/>
 </g>
 <g opacity="0">
-<text x="20" y="44.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⣠⡶⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="64.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⣰⣿⠃⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="84.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢸⣿⣯⠀⠀⠀⠀⠀⠀⢠⣴⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀</text>
-<text x="20" y="104.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢼⣿⣿⣆⠀⢀⣀⣀⣴⣿⣿⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="124.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢸⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="144.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢻⣿⠋⠙⢿⣿⣿⡀⠀⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="164.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢸⠿⢆⣀⣼⣿⣿⣿⣿⡏⠀⢹⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="184.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⡀⣨⡙⠟⣩⣙⣡⣬⣴⣤⠏⠀⠀⠀⠀⠀⠀⣀⡀</text>
-<text x="20" y="204.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⣀⣤⣾⣿⣿⡇</text>
-<text x="20" y="224.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣇⠀⢸⣿⣿⠿⠿⠛⠃</text>
-<text x="20" y="244.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⢠⣿⣿⢹⣿⢹⣿⣿⣿⢰⣿⠿⠃⠀⠀⠀⠀</text>
-<text x="20" y="264.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢀⣀⣤⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡛⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="284.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠛⠓⠀⠀⠀⠀⠀</text>
-<text x="20" y="304.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠉⠀⠉⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="74.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⣠⡶⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="94.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⣰⣿⠃⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="114.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢸⣿⣯⠀⠀⠀⠀⠀⠀⢠⣴⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀</text>
+<text x="20" y="134.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢼⣿⣿⣆⠀⢀⣀⣀⣴⣿⣿⣿⠋⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="154.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢸⣿⣿⣿⣿⣿⣿⣿⠿⠿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="174.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢻⣿⠋⠙⢿⣿⣿⡀⠀⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="194.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢸⠿⢆⣀⣼⣿⣿⣿⣿⡏⠀⢹⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="214.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⡀⣨⡙⠟⣩⣙⣡⣬⣴⣤⠏⠀⠀⠀⠀⠀⠀⣀⡀</text>
+<text x="20" y="234.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⣀⣤⣾⣿⣿⡇</text>
+<text x="20" y="254.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣇⠀⢸⣿⣿⠿⠿⠛⠃</text>
+<text x="20" y="274.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⢠⣿⣿⢹⣿⢹⣿⣿⣿⢰⣿⠿⠃⠀⠀⠀⠀</text>
+<text x="20" y="294.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢀⣀⣤⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡛⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="314.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠛⠓⠀⠀⠀⠀⠀</text>
+<text x="20" y="334.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠉⠀⠉⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
 <animate attributeName="opacity" calcMode="discrete" begin="0s" dur="180s" repeatCount="indefinite" keyTimes="0.0000;0.1667;0.3333;0.5000;0.6667;0.8333;1.0000" values="0;0;1;0;0;0;0"/>
 </g>
 <g opacity="0">
-<text x="20" y="44.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="64.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⢀⣴⣾⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="84.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⢀⣴⠿⢟⣛⣩⣤⣶⣶⣶⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="104.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⢀⣴⣿⠿⠸⣿⣿⣿⣿⣿⣿⡿⢿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="124.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢠⠞⠉⠀⠀⠀⣿⠋⠻⣿⣿⣿⠀⣦⣿⠏⠀⠀⠀⢀⣀⣀⣀⣀⣀⠀⠀</text>
-<text x="20" y="144.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢠⠏⠀⠀⠀⠀⠀⠻⣤⣷⣿⣿⣿⣶⢟⣁⣒⣒⡋⠉⠉⠁⠀⠀⠀⠈⠉⡧</text>
-<text x="20" y="164.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢻⡀⠀⠀⠀⠀⠀⣀⡤⠌⢙⣛⣛⣵⣿⣿⡛⠛⠿⠃⠀⠀⠀⠀⠀⢀⡜⠁</text>
-<text x="20" y="184.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠉⠙⠒⠒⠛⠉⠁⠀⠸⠛⠉⠉⣿⣿⣿⣿⣦⣄⠀⠀⠀⢀⣠⠞⠁⠀⠀</text>
-<text x="20" y="204.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⡿⣿⣿⣷⡄⠞⠋⠀⠀⠀⠀⠀</text>
-<text x="20" y="224.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣷⡻⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="244.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⣑⡙⠻⠿⠿⠈⠙⣿⣧⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="264.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣷⡀⠀⠀⠀⠀⢹⣿⣆⠀⠀⠀⠀⠀</text>
-<text x="20" y="284.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡇⠀⠀⠀⠀⠸⣿⣿⡄⠀⠀⠀⠀</text>
-<text x="20" y="304.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⡿⣿⣿⠀⠀⠀⠀</text>
-<text x="20" y="324.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠀⠀⠀⠀⠀</text>
+<text x="20" y="74.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="94.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⢀⣴⣾⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="114.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⢀⣴⠿⢟⣛⣩⣤⣶⣶⣶⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="134.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⢀⣴⣿⠿⠸⣿⣿⣿⣿⣿⣿⡿⢿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="154.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢠⠞⠉⠀⠀⠀⣿⠋⠻⣿⣿⣿⠀⣦⣿⠏⠀⠀⠀⢀⣀⣀⣀⣀⣀⠀⠀</text>
+<text x="20" y="174.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢠⠏⠀⠀⠀⠀⠀⠻⣤⣷⣿⣿⣿⣶⢟⣁⣒⣒⡋⠉⠉⠁⠀⠀⠀⠈⠉⡧</text>
+<text x="20" y="194.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢻⡀⠀⠀⠀⠀⠀⣀⡤⠌⢙⣛⣛⣵⣿⣿⡛⠛⠿⠃⠀⠀⠀⠀⠀⢀⡜⠁</text>
+<text x="20" y="214.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠉⠙⠒⠒⠛⠉⠁⠀⠸⠛⠉⠉⣿⣿⣿⣿⣦⣄⠀⠀⠀⢀⣠⠞⠁⠀⠀</text>
+<text x="20" y="234.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⡿⣿⣿⣷⡄⠞⠋⠀⠀⠀⠀⠀</text>
+<text x="20" y="254.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣷⡻⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="274.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢨⣑⡙⠻⠿⠿⠈⠙⣿⣧⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="294.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣷⡀⠀⠀⠀⠀⢹⣿⣆⠀⠀⠀⠀⠀</text>
+<text x="20" y="314.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡇⠀⠀⠀⠀⠸⣿⣿⡄⠀⠀⠀⠀</text>
+<text x="20" y="334.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⡿⣿⣿⠀⠀⠀⠀</text>
+<text x="20" y="354.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠀⠀⠀⠀⠀</text>
 <animate attributeName="opacity" calcMode="discrete" begin="0s" dur="180s" repeatCount="indefinite" keyTimes="0.0000;0.1667;0.3333;0.5000;0.6667;0.8333;1.0000" values="0;0;0;1;0;0;0"/>
 </g>
 <g opacity="0">
-<text x="20" y="44.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="64.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="84.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣷⣀⣀⣀⣀⠀⠀⠀⠀⣀⣀⣀⣀⣠⣤⡤</text>
-<text x="20" y="104.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀</text>
-<text x="20" y="124.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠋⠀⠀⠀</text>
-<text x="20" y="144.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⢰⡇⣿⣿⣿⣿⣿⣿⡿⠟⣻⣿⣿⣿⣿⣿⣥⣄⣀⣀⣀⡀</text>
-<text x="20" y="164.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢀⣴⣶⣶⣦⣤⣄⠀⢷⣼⣿⣿⡿⠻⠁⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠁⠀</text>
-<text x="20" y="184.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢀⣿⡿⢻⣿⣿⠿⠟⠀⠀⠟⠛⢿⠿⠿⠷⡶⠚⢻⣿⣿⣿⣿⣿⣋⣁⠀⠀⠀⠀</text>
-<text x="20" y="204.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠹⡟⠀⠸⡿⠁⠀⠀⠀⠀⠈⢄⠈⠀⠀⠀⠁⢀⣾⣿⣿⣿⣿⠿⠋⠁⠀⠀⠀⠀</text>
-<text x="20" y="224.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠶⣤⣤⣶⣟⣿⣻⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="244.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⡾⣿⣿⡣⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="264.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠟⢻⣿⣿⢿⣿⣿⡝⠻⢷⣄⠀⠀⠀⠀⠀</text>
-<text x="20" y="284.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⢸⡿⠁⠀⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="304.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠀⠀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="74.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="94.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="114.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣷⣀⣀⣀⣀⠀⠀⠀⠀⣀⣀⣀⣀⣠⣤⡤</text>
+<text x="20" y="134.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀</text>
+<text x="20" y="154.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠋⠀⠀⠀</text>
+<text x="20" y="174.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⢰⡇⣿⣿⣿⣿⣿⣿⡿⠟⣻⣿⣿⣿⣿⣿⣥⣄⣀⣀⣀⡀</text>
+<text x="20" y="194.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⢀⣴⣶⣶⣦⣤⣄⠀⢷⣼⣿⣿⡿⠻⠁⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠁⠀</text>
+<text x="20" y="214.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢀⣿⡿⢻⣿⣿⠿⠟⠀⠀⠟⠛⢿⠿⠿⠷⡶⠚⢻⣿⣿⣿⣿⣿⣋⣁⠀⠀⠀⠀</text>
+<text x="20" y="234.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠹⡟⠀⠸⡿⠁⠀⠀⠀⠀⠈⢄⠈⠀⠀⠀⠁⢀⣾⣿⣿⣿⣿⠿⠋⠁⠀⠀⠀⠀</text>
+<text x="20" y="254.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠶⣤⣤⣶⣟⣿⣻⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="274.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⡾⣿⣿⡣⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="294.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠟⢻⣿⣿⢿⣿⣿⡝⠻⢷⣄⠀⠀⠀⠀⠀</text>
+<text x="20" y="314.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⢸⡿⠁⠀⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="334.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠁⠀⠀⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
 <animate attributeName="opacity" calcMode="discrete" begin="0s" dur="180s" repeatCount="indefinite" keyTimes="0.0000;0.1667;0.3333;0.5000;0.6667;0.8333;1.0000" values="0;0;0;0;1;0;0"/>
 </g>
 <g opacity="0">
-<text x="20" y="44.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="64.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣤⣄⣾⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="84.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⢿⣿⣿⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="104.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⢰⣦⠀⠀⠀⣽⢿⣵⣿⡟⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="124.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⣀⣀⣽⣷⣖⡤⣵⣿⣧⣭⠁⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="144.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢀⡤⢦⣄⡈⠛⠈⠛⠋⠉⠋⠻⣿⣿⡿⣧⣀⠀⠀⠀⠀⠀</text>
-<text x="20" y="164.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⣾⠁⠀⠘⣷⣄⠀⠀⠀⠀⠀⠀⠙⣿⣿⡄⠉⠻⣦⠀⠀⠀</text>
-<text x="20" y="184.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢹⡄⠀⠀⠘⣿⣦⡀⠀⠀⠀⣠⣾⣿⢯⣯⣤⡀⠈⣷⣄⠀</text>
-<text x="20" y="204.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠈⢷⡄⠀⠀⠸⣿⣿⣦⣤⣼⣿⣿⣿⢾⣿⣿⣷⠈⠇⡹⡦</text>
-<text x="20" y="224.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠈⢿⣷⣄⡀⠘⢿⣿⡇⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀</text>
-<text x="20" y="244.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠹⣿⣿⡄⠀⠙⢣⣿⠿⠿⠟⠛⣿⠟⠁⠀⠀⠀⠀</text>
-<text x="20" y="264.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠉⠀⠀⣠⡿⠃⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀</text>
-<text x="20" y="284.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⢠⣿⡃⠀⠀⠀⠀⠶⠻⣷⣄⣀⢀⠀⠀</text>
-<text x="20" y="304.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⣰⣿⡿⣿⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀</text>
-<text x="20" y="324.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="74.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="94.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣤⣄⣾⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="114.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⢿⣿⣿⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="134.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⢰⣦⠀⠀⠀⣽⢿⣵⣿⡟⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="154.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⣀⣀⣽⣷⣖⡤⣵⣿⣧⣭⠁⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="174.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢀⡤⢦⣄⡈⠛⠈⠛⠋⠉⠋⠻⣿⣿⡿⣧⣀⠀⠀⠀⠀⠀</text>
+<text x="20" y="194.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⣾⠁⠀⠘⣷⣄⠀⠀⠀⠀⠀⠀⠙⣿⣿⡄⠉⠻⣦⠀⠀⠀</text>
+<text x="20" y="214.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⢹⡄⠀⠀⠘⣿⣦⡀⠀⠀⠀⣠⣾⣿⢯⣯⣤⡀⠈⣷⣄⠀</text>
+<text x="20" y="234.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠈⢷⡄⠀⠀⠸⣿⣿⣦⣤⣼⣿⣿⣿⢾⣿⣿⣷⠈⠇⡹⡦</text>
+<text x="20" y="254.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠈⢿⣷⣄⡀⠘⢿⣿⡇⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀</text>
+<text x="20" y="274.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠹⣿⣿⡄⠀⠙⢣⣿⠿⠿⠟⠛⣿⠟⠁⠀⠀⠀⠀</text>
+<text x="20" y="294.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠉⠀⠀⣠⡿⠃⠀⠀⠀⢠⣿⠀⠀⠀⠀⠀⠀</text>
+<text x="20" y="314.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠀⢠⣿⡃⠀⠀⠀⠀⠶⠻⣷⣄⣀⢀⠀⠀</text>
+<text x="20" y="334.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⣰⣿⡿⣿⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀</text>
+<text x="20" y="354.0" font-size="15" fill="#ff5f5f" xml:space="preserve">⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</text>
 <animate attributeName="opacity" calcMode="discrete" begin="0s" dur="180s" repeatCount="indefinite" keyTimes="0.0000;0.1667;0.3333;0.5000;0.6667;0.8333;1.0000" values="0;0;0;0;0;1;0"/>
 </g>
-<text x="440.0" y="44.0" font-size="15" font-weight="700" fill="#ff3b3b">GitHub</text>
-<text x="440.0" y="64.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="64.0" font-size="15" fill="#ff8c69">Username</text><text x="548.0" y="64.0" font-size="15" fill="#c05656"> ➜ </text><text x="584.0" y="64.0" font-size="15" fill="#f2d0c9">rs4t</text>
-<text x="440.0" y="84.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="84.0" font-size="15" fill="#ff8c69">Uptime</text><text x="530.0" y="84.0" font-size="15" fill="#c05656"> ➜ </text><text x="566.0" y="84.0" font-size="15" fill="#f2d0c9">1 yr, 7 mos</text>
-<text x="440.0" y="104.0" font-size="15" fill="#c05656">└─ </text><text x="467.0" y="104.0" font-size="15" fill="#ff8c69">Location</text><text x="548.0" y="104.0" font-size="15" fill="#c05656"> ➜ </text><text x="584.0" y="104.0" font-size="15" fill="#f2d0c9">Switzerland</text>
-<text x="440.0" y="144.0" font-size="15" font-weight="700" fill="#ff3b3b">Contact</text>
-<text x="440.0" y="164.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="164.0" font-size="15" fill="#ff8c69">Website</text><text x="539.0" y="164.0" font-size="15" fill="#c05656"> ➜ </text><text x="575.0" y="164.0" font-size="15" fill="#f2d0c9">zegg.me</text>
-<text x="440.0" y="184.0" font-size="15" fill="#c05656">└─ </text><text x="467.0" y="184.0" font-size="15" fill="#ff8c69">GitHub</text><text x="530.0" y="184.0" font-size="15" fill="#c05656"> ➜ </text><text x="566.0" y="184.0" font-size="15" fill="#f2d0c9">github.com/rs4t</text>
-<text x="440.0" y="224.0" font-size="15" font-weight="700" fill="#ff3b3b">Stats</text>
-<text x="440.0" y="244.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="244.0" font-size="15" fill="#ff8c69">Public Repos</text><text x="584.0" y="244.0" font-size="15" fill="#c05656"> ➜ </text><text x="620.0" y="244.0" font-size="15" fill="#f2d0c9">7</text>
-<text x="440.0" y="264.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="264.0" font-size="15" fill="#ff8c69">Total Stars</text><text x="575.0" y="264.0" font-size="15" fill="#c05656"> ➜ </text><text x="611.0" y="264.0" font-size="15" fill="#f2d0c9">12</text>
-<text x="440.0" y="284.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="284.0" font-size="15" fill="#ff8c69">Total Commits</text><text x="593.0" y="284.0" font-size="15" fill="#c05656"> ➜ </text><text x="629.0" y="284.0" font-size="15" fill="#f2d0c9">74</text>
-<text x="440.0" y="304.0" font-size="15" fill="#c05656">└─ </text><text x="467.0" y="304.0" font-size="15" fill="#ff8c69">Followers</text><text x="557.0" y="304.0" font-size="15" fill="#c05656"> ➜ </text><text x="593.0" y="304.0" font-size="15" fill="#f2d0c9">6</text>
+<text x="440.0" y="74.0" font-size="15" font-weight="700" fill="#ff3b3b">GitHub</text>
+<text x="440.0" y="94.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="94.0" font-size="15" fill="#ff8c69">Username</text><text x="548.0" y="94.0" font-size="15" fill="#c05656"> ➜ </text><text x="584.0" y="94.0" font-size="15" fill="#f2d0c9">rs4t</text>
+<text x="440.0" y="114.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="114.0" font-size="15" fill="#ff8c69">Uptime</text><text x="530.0" y="114.0" font-size="15" fill="#c05656"> ➜ </text><text x="566.0" y="114.0" font-size="15" fill="#f2d0c9">1 yr, 7 mos</text>
+<text x="440.0" y="134.0" font-size="15" fill="#c05656">└─ </text><text x="467.0" y="134.0" font-size="15" fill="#ff8c69">Location</text><text x="548.0" y="134.0" font-size="15" fill="#c05656"> ➜ </text><text x="584.0" y="134.0" font-size="15" fill="#f2d0c9">Switzerland</text>
+<text x="440.0" y="174.0" font-size="15" font-weight="700" fill="#ff3b3b">Contact</text>
+<text x="440.0" y="194.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="194.0" font-size="15" fill="#ff8c69">Website</text><text x="539.0" y="194.0" font-size="15" fill="#c05656"> ➜ </text><text x="575.0" y="194.0" font-size="15" fill="#f2d0c9">zegg.me</text>
+<text x="440.0" y="214.0" font-size="15" fill="#c05656">└─ </text><text x="467.0" y="214.0" font-size="15" fill="#ff8c69">GitHub</text><text x="530.0" y="214.0" font-size="15" fill="#c05656"> ➜ </text><text x="566.0" y="214.0" font-size="15" fill="#f2d0c9">github.com/rs4t</text>
+<text x="440.0" y="254.0" font-size="15" font-weight="700" fill="#ff3b3b">Stats</text>
+<text x="440.0" y="274.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="274.0" font-size="15" fill="#ff8c69">Public Repos</text><text x="584.0" y="274.0" font-size="15" fill="#c05656"> ➜ </text><text x="620.0" y="274.0" font-size="15" fill="#f2d0c9">7</text>
+<text x="440.0" y="294.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="294.0" font-size="15" fill="#ff8c69">Total Stars</text><text x="575.0" y="294.0" font-size="15" fill="#c05656"> ➜ </text><text x="611.0" y="294.0" font-size="15" fill="#f2d0c9">12</text>
+<text x="440.0" y="314.0" font-size="15" fill="#c05656">├─ </text><text x="467.0" y="314.0" font-size="15" fill="#ff8c69">Total Commits</text><text x="593.0" y="314.0" font-size="15" fill="#c05656"> ➜ </text><text x="629.0" y="314.0" font-size="15" fill="#f2d0c9">74</text>
+<text x="440.0" y="334.0" font-size="15" fill="#c05656">└─ </text><text x="467.0" y="334.0" font-size="15" fill="#ff8c69">Followers</text><text x="557.0" y="334.0" font-size="15" fill="#c05656"> ➜ </text><text x="593.0" y="334.0" font-size="15" fill="#f2d0c9">6</text>
 </svg>
