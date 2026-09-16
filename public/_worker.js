@@ -89,7 +89,13 @@ async function getTotalCommits(repos, token) {
 }
 
 async function buildSections(token) {
-  const user = await (await ghFetch(`/users/${USERNAME}`, token)).json();
+  const userRes = await ghFetch(`/users/${USERNAME}`, token);
+  const user = await userRes.json();
+  if (!userRes.ok) {
+    throw new Error(
+      `GitHub API error ${userRes.status} on /users/${USERNAME}: ${JSON.stringify(user)}`
+    );
+  }
   const repos = await paginate(`/users/${USERNAME}/repos?type=owner`, token);
   const totalStars = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
   const totalCommits = await getTotalCommits(repos, token);
@@ -225,7 +231,22 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === "/profile-card.svg") {
-      return handleProfileCard(request, env);
+      try {
+        return await handleProfileCard(request, env);
+      } catch (e) {
+        return new Response(`profile-card error: ${e.message}`, {
+          status: 500,
+          headers: { "Content-Type": "text/plain" },
+        });
+      }
+    }
+    if (url.pathname === "/debug") {
+      const res = await ghFetch(`/users/${USERNAME}`, env.GITHUB_TOKEN);
+      const body = await res.text();
+      return new Response(
+        `has token: ${Boolean(env.GITHUB_TOKEN)}\nstatus: ${res.status}\nbody: ${body}`,
+        { headers: { "Content-Type": "text/plain" } }
+      );
     }
     return new Response("rs4t profile card host. See /profile-card.svg", {
       headers: { "Content-Type": "text/plain" },
