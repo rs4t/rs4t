@@ -43,7 +43,10 @@ def main():
     # that fetched it before an outage keeps showing the last good copy;
     # this repo-hosted animated SVG is the last-resort manual fallback if
     # Pages is ever unreachable.
-    block = f'<img src="{CARD_URL}" alt="rs4t GitHub stats" width="100%" />'
+    block = (
+        f'<a href="https://zegg.me"><img src="{CARD_URL}" alt="rs4t GitHub stats" '
+        'width="100%" /></a>'
+    )
     new_readme = readme[:start_idx] + "\n" + block + "\n" + readme[end_idx:]
 
     with open(readme_path, "w", encoding="utf-8") as f:
