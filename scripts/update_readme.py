@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Regenerate the repo-hosted fallback profile-card.svg and README.md.
 
-The live, wall-clock-synced card is served by scripts/server.py on the
-home server; this script just keeps a static, self-animating copy in the
-repo as a backup for whenever that server is unreachable.
+The live, wall-clock-synced card is served by functions/profile-card.svg.js
+on Cloudflare Pages (see scripts/build_cf_function.py); this script just
+keeps a static, self-animating copy in the repo as a backup for whenever
+that's unreachable.
 """
 import os
 
@@ -36,12 +37,12 @@ def main():
     end_marker = "<!--STATS:END-->"
     start_idx = readme.index(start_marker) + len(start_marker)
     end_idx = readme.index(end_marker)
-    # Primary: the home server, which picks the current art from the real
-    # wall clock so every viewer at a given moment sees the same one.
-    # Fallback: stale-if-error on the server's own Cache-Control means a
-    # browser that fetched it before an outage keeps showing the last good
-    # copy; this repo-hosted animated SVG is the last-resort manual
-    # fallback if the server is retired or down for good.
+    # Primary: Cloudflare Pages Function, which picks the current art from
+    # the real wall clock so every viewer at a given moment sees the same
+    # one. Fallback: stale-if-error in its Cache-Control means a browser
+    # that fetched it before an outage keeps showing the last good copy;
+    # this repo-hosted animated SVG is the last-resort manual fallback if
+    # Pages is ever unreachable.
     block = f'<img src="{CARD_URL}" alt="rs4t GitHub stats" width="100%" />'
     new_readme = readme[:start_idx] + "\n" + block + "\n" + readme[end_idx:]
 
