@@ -197,7 +197,7 @@ function buildSvgFrame(asciiArtSets, sections, artIndex) {
   return parts.join("\n");
 }
 
-async function handleProfileCard(request, env) {
+async function currentSvg(request, env) {
   const cache = caches.default;
   const cacheKey = new Request(new URL("/__profile-card-stats-cache", request.url).toString());
 
@@ -214,8 +214,11 @@ async function handleProfileCard(request, env) {
   }
 
   const artIndex = Math.floor(Date.now() / 1000 / ART_CYCLE_SECONDS) % ASCII_ARTS.length;
-  const svg = buildSvgFrame(ASCII_ARTS, sections, artIndex);
+  return buildSvgFrame(ASCII_ARTS, sections, artIndex);
+}
 
+async function handleProfileCard(request, env) {
+  const svg = await currentSvg(request, env);
   return new Response(svg, {
     headers: {
       "Content-Type": "image/svg+xml",
@@ -224,29 +227,73 @@ async function handleProfileCard(request, env) {
   });
 }
 
+// Discord (and most other unfurlers) won't rasterize an SVG for an embed
+// image, so we hand the SVG to wsrv.nl (a free, widely used image proxy)
+// to convert it to PNG rather than bundling our own renderer.
+async function handleProfileCardPng(request, env) {
+  const svgUrl = new URL("/profile-card.svg", request.url).toString();
+  const proxied = `https://wsrv.nl/?url=${encodeURIComponent(svgUrl)}&output=png&w=1024`;
+  const res = await fetch(proxied);
+  const body = await res.arrayBuffer();
+  return new Response(body, {
+    headers: {
+      "Content-Type": "image/png",
+      "Cache-Control": `public, max-age=${ART_CYCLE_SECONDS}, stale-while-revalidate=30, stale-if-error=86400`,
+    },
+  });
+}
+
+function handleEmbedPage(request) {
+  const origin = new URL(request.url).origin;
+  const html = `<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>rs4t</title>
+<meta property="og:title" content="rs4t">
+<meta property="og:description" content="GitHub stats, live">
+<meta property="og:image" content="${origin}/profile-card.png">
+<meta property="og:url" content="${origin}/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="refresh" content="0; url=https://zegg.me">
+</head>
+<body>
+<a href="https://zegg.me">zegg.me</a>
+</body>
+</html>`;
+  return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8" } });
+}
+
 // A _worker.js at the assets root makes this a full Worker (Advanced Mode)
 // instead of a static-assets-only deployment, which is required for
 // runtime variables/secrets like GITHUB_TOKEN to be readable at all.
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname === "/profile-card.svg") {
-      try {
+    try {
+      if (url.pathname === "/profile-card.svg") {
         return await handleProfileCard(request, env);
-      } catch (e) {
-        return new Response(`profile-card error: ${e.message}`, {
-          status: 500,
-          headers: { "Content-Type": "text/plain" },
-        });
       }
-    }
-    if (url.pathname === "/debug") {
-      const res = await ghFetch(`/users/${USERNAME}`, env.GITHUB_TOKEN);
-      const body = await res.text();
-      return new Response(
-        `has token: ${Boolean(env.GITHUB_TOKEN)}\nstatus: ${res.status}\nbody: ${body}`,
-        { headers: { "Content-Type": "text/plain" } }
-      );
+      if (url.pathname === "/profile-card.png") {
+        return await handleProfileCardPng(request, env);
+      }
+      if (url.pathname === "/debug") {
+        const res = await ghFetch(`/users/${USERNAME}`, env.GITHUB_TOKEN);
+        const body = await res.text();
+        return new Response(
+          `has token: ${Boolean(env.GITHUB_TOKEN)}\nstatus: ${res.status}\nbody: ${body}`,
+          { headers: { "Content-Type": "text/plain" } }
+        );
+      }
+      if (url.pathname === "/") {
+        return handleEmbedPage(request);
+      }
+    } catch (e) {
+      return new Response(`profile-card error: ${e.message}`, {
+        status: 500,
+        headers: { "Content-Type": "text/plain" },
+      });
     }
     return new Response("rs4t profile card host. See /profile-card.svg", {
       headers: { "Content-Type": "text/plain" },
