@@ -191,7 +191,7 @@ function buildSvgFrame(asciiArtSets, sections, artIndex) {
   return parts.join("\n");
 }
 
-export async function onRequestGet({ request, env }) {
+async function handleProfileCard(request, env) {
   const cache = caches.default;
   const cacheKey = new Request(new URL("/__profile-card-stats-cache", request.url).toString());
 
@@ -217,3 +217,18 @@ export async function onRequestGet({ request, env }) {
     },
   });
 }
+
+// A _worker.js at the assets root makes this a full Worker (Advanced Mode)
+// instead of a static-assets-only deployment, which is required for
+// runtime variables/secrets like GITHUB_TOKEN to be readable at all.
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    if (url.pathname === "/profile-card.svg") {
+      return handleProfileCard(request, env);
+    }
+    return new Response("rs4t profile card host. See /profile-card.svg", {
+      headers: { "Content-Type": "text/plain" },
+    });
+  },
+};

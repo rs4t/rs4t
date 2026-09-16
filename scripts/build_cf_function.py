@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Generate functions/profile-card.svg.js from ascii_arts.txt.
+"""Generate public/_worker.js from ascii_arts.txt.
 
-Cloudflare Pages Functions run as plain JS with no build step, so the
-ascii art needs to be baked into the function file rather than read from
-disk at request time. Regenerate this whenever ascii_arts.txt changes.
+A _worker.js at the assets root makes the Cloudflare project a full
+Worker (Advanced Mode) instead of a static-assets-only deployment, which
+is required for it to read runtime variables/secrets like GITHUB_TOKEN
+at all. It runs as plain JS with no build step, so the ascii art needs to
+be baked into the file rather than read from disk at request time.
+Regenerate this whenever ascii_arts.txt changes.
 """
 import json
 import os
@@ -204,7 +207,7 @@ function buildSvgFrame(asciiArtSets, sections, artIndex) {{
   return parts.join("\\n");
 }}
 
-export async function onRequestGet({{ request, env }}) {{
+async function handleProfileCard(request, env) {{
   const cache = caches.default;
   const cacheKey = new Request(new URL("/__profile-card-stats-cache", request.url).toString());
 
@@ -230,6 +233,21 @@ export async function onRequestGet({{ request, env }}) {{
     }},
   }});
 }}
+
+// A _worker.js at the assets root makes this a full Worker (Advanced Mode)
+// instead of a static-assets-only deployment, which is required for
+// runtime variables/secrets like GITHUB_TOKEN to be readable at all.
+export default {{
+  async fetch(request, env) {{
+    const url = new URL(request.url);
+    if (url.pathname === "/profile-card.svg") {{
+      return handleProfileCard(request, env);
+    }}
+    return new Response("rs4t profile card host. See /profile-card.svg", {{
+      headers: {{ "Content-Type": "text/plain" }},
+    }});
+  }},
+}};
 """
 
 
@@ -260,9 +278,9 @@ def main():
         ascii_arts_json=json.dumps(ascii_art_sets, ensure_ascii=False),
     )
 
-    functions_dir = os.path.join(repo_root, "functions")
-    os.makedirs(functions_dir, exist_ok=True)
-    out_path = os.path.join(functions_dir, "profile-card.svg.js")
+    public_dir = os.path.join(repo_root, "public")
+    os.makedirs(public_dir, exist_ok=True)
+    out_path = os.path.join(public_dir, "_worker.js")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(out)
     print(f"wrote {out_path}")
