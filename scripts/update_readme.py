@@ -10,7 +10,7 @@ import os
 
 import cardlib
 
-CARD_URL = "https://card.zegg.me/profile-card.svg"
+CARD_URL = "https://card.egorz.com/profile-card.svg"
 
 
 def main():
@@ -44,7 +44,7 @@ def main():
     # this repo-hosted animated SVG is the last-resort manual fallback if
     # Pages is ever unreachable.
     block = (
-        f'<a href="https://zegg.me"><img src="{CARD_URL}" alt="rs4t GitHub stats" '
+        f'<a href="https://egorz.com"><img src="{CARD_URL}" alt="rs4t GitHub stats" '
         'width="100%" /></a>'
     )
     new_readme = readme[:start_idx] + "\n" + block + "\n" + readme[end_idx:]

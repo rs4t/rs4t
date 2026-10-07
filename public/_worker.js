@@ -111,7 +111,7 @@ async function buildSections(token) {
         ["Location", "Switzerland"],
       ],
     ],
-    ["Contact", [["Website", "zegg.me"], ["GitHub", `github.com/${USERNAME}`]]],
+    ["Contact", [["Website", "egorz.com"], ["GitHub", `github.com/${USERNAME}`]]],
     [
       "Stats",
       [
@@ -268,10 +268,10 @@ function handleEmbedPage(request) {
 <meta property="og:url" content="${origin}/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta http-equiv="refresh" content="0; url=https://zegg.me">
+<meta http-equiv="refresh" content="0; url=https://egorz.com">
 </head>
 <body>
-<a href="https://zegg.me">zegg.me</a>
+<a href="https://egorz.com">egorz.com</a>
 </body>
 </html>`;
   return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8" } });
